@@ -13,8 +13,12 @@ export class InterpolacaoComponent implements OnInit {
   subTitle;
   text;
   save = false;
-
+  colors = [ 'primary', 'accent', 'warn', ''];
+  idColor = 0;
   ngOnInit() {
+    setInterval( () => {
+      this.idColor = (this.idColor + 1) % this.colors.length;
+    }, 500);
   }
 
   ok(){

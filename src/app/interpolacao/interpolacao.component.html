@@ -32,7 +32,7 @@
     </p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button (click)="ok()" *ngIf="!save">SEND</button>
-    <button mat-button (click)="ok()" *ngIf="save">EDIT</button>
+    <button mat-button (click)="ok()" [color]="colors[idColor]" *ngIf="!save">SEND</button>
+    <button mat-button (click)="ok()" [color]="colors[idColor]" *ngIf="save">EDIT</button>
   </mat-card-actions>
 </mat-card>
